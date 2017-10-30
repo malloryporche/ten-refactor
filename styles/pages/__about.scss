@@ -1,0 +1,35 @@
+#about_page {
+	@include rem(20);;
+	text-align: center;
+	line-height: 1.8;
+	#about {
+		img:first-of-type {
+			width: 100%;
+			}
+		h1 {
+			padding: 70px 0 0;
+			text-align: center;
+			letter-spacing: 3px;
+			span {
+				color: $secondary_color;
+				font-weight: bolder;
+			}
+		}
+		hr {
+			max-width: 25%;
+			border: 5px solid $accent_green;
+		}
+		p {
+			max-width: 900px;
+			display: block;
+			margin: 0 auto;
+			
+			
+			&:first-letter {
+				@include rem(40);;
+				font-weight: bolder;
+				position: absolute;
+			}
+		}
+		}
+}

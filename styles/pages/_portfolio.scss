@@ -1,0 +1,309 @@
+.portfolio-description-text hr {
+  max-width: 45%;
+  margin: 20px auto;
+  border: 1.5px solid #313139;
+}
+
+header #slider_fullwidth {
+  padding: 0;
+}
+main#slider_fw.container-fluid {
+  margin-top: -100px;
+  padding-bottom: 190px;
+}
+section.thumbnail_gallery {
+  margin-bottom: 250px;
+}
+.carousel-fade {
+  .carousel-inner {
+    .item {
+	@include transition(opacity, 1.0s, ease-out, 0);;
+      opacity: 0;
+      transition-property: opacity;
+	width: 100%;
+	margin: 0 auto;
+	min-height: 900px;	
+	.center-block {
+		padding: 0;
+    background-size: cover;
+	}
+    }
+
+    .active {
+      opacity: 1;
+      @include transition(opacity, 1.0s, ease,1s);;
+      background-size: cover;
+    }
+
+    .active.left,
+    .active.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+       @include transition(opacity, 2s, ease-in,1s);;
+       background-size: cover;
+      
+    }
+
+    .next.left,
+    .prev.right {
+      opacity: 1;
+       @include transition(opacity, 2s, ease-in,0s);;
+      background-size: cover;
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+    @include transition(all, 3s, ease,0);;
+    span {
+      color: $accent_green;
+      opacity: 1;
+      border-radius: 50%;
+      @include rem(80);;
+    }
+  }
+}
+
+.carousel, 
+.carousel-inner, 
+.carousel-inner .item {
+  height: 100%;
+}
+
+@media screen and (min-width: 1026px) {
+  .carousel-fade {
+  .carousel-inner {
+    .item {
+      background-size: cover;
+      -webkit-background-size: cover;
+      }
+    }
+  }
+}
+.item:nth-child(1) {
+
+  background: url('../imgs/work/fc2.jpg') center center no-repeat;
+}
+.item:nth-child(2) {
+  background: url('../imgs/work/fc3.jpg') center center no-repeat;}
+
+.item:nth-child(3) {
+	  background: url('../imgs/work/fc4.jpg') center center no-repeat;
+}
+.item:nth-child(4) {
+  	background: url('../imgs/work/fc5.jpg') center center no-repeat;
+}
+.item:nth-child(5) {
+  background: url('../imgs/work/fc6.jpg') center center no-repeat;}
+
+.item:nth-child(6) {
+	  background: url('../imgs/work/fc7.jpg') center center no-repeat;
+
+}
+.item:nth-child(7) {
+  background: url('../imgs/work/fc8.jpg') center center no-repeat;}
+
+a.carousel-control.right, a.carousel-control.left {
+	background-image: none; 
+}
+
+.portfolio-description-text {
+      margin: 45px 45px 0;
+  h1 {
+    text-align: center;
+    letter-spacing: 0.2em;
+    &:first-line {
+     @include highlight($accent_green);;
+    }
+  }
+  h4 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  p {
+    letter-spacing: 0.1em;
+    color: darkgray;
+    &:first-of-type {
+      padding-top: 25px;
+      display: inline-block;
+      float: right;
+    &:first-letter {
+      margin-top: -20px;
+      margin-bottom: -40px;
+      margin-right: 5px;
+      @include highlight($secondary_color);;
+      @include rem(100);;
+      display: inline-block;
+      float: left;
+      }
+    }
+  }
+}
+#gallery_info {
+  border-top: 2px solid $primary_color;
+  border-bottom: 2px solid $primary_color;
+  padding: 40px 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  h5 {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    padding-bottom: 0px;
+    margin-bottom: -2px;
+    color: $primary_color;
+  }
+  h6 {
+    letter-spacing: 2px;
+    text-align: center;
+    color: gray;
+  }
+}
+#portfolio-description-img-information div#social_media-share {
+  padding: 0;
+}
+div.soc-media-links {
+  padding: 0;
+  display: inline-block;
+  margin: 0 auto;
+  button {
+    display: block;
+    color: white;
+    border-radius: 3px;
+    margin: 30px auto;
+    padding: 5px 0;
+    width: 80%;
+  }
+}
+button#soc-fb {
+  background-color: #5975b1;
+  border-color: #5975b1;
+}
+button#soc-twtr {
+  background-color: #53c3ee;
+  border-color: #53c3ee;
+}
+button#soc-gp {
+  background-color: #d54e55;
+  border-color: #d54e55;
+}
+button#soc-pin {
+  background-color: #de4d35;
+  border-color: #de4d35;
+}
+.post-navigation {
+  display: block;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.2em;
+  background-color: #FFF;
+    a {
+      margin: 60px 0;
+      border: 1px solid $primary_color;
+      display: block;
+      color: $primary_color;
+      padding: 15px 10px;
+      @include transition(all, 1s, ease, 0);;
+      span.no-show {
+        display: none;
+      }
+      &:hover {
+        border: 1px solid $secondary_color;
+        background-color: $secondary_color;
+        @include transition(all, 1s, ease, 0);;
+        .post-navigation {
+          border-color: transparent;
+        }
+        span.no-show {
+          display: inline-block;
+          @include highlight(white);;
+        }
+        span:first-of-type {
+          display: none;
+        }
+      }
+  }
+}
+div.col-xs-6, .col-sm-3, .col-md-3, .col-lg-3 {
+  padding: 0;
+}
+img.thumbnail {
+  padding: 0;
+  margin-bottom: 0;
+  border: 1px solid transparent;
+    max-width: 100%;
+  }
+@media screen and (max-width: 768px) {
+  section.thumbnail_gallery {
+    margin-bottom: 250px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  section#portfolio-description-img-information #social_media-share {
+    padding: 40px 0;
+    border-top: 2px solid $primary_color;
+    margin-top: 40px;
+  }
+  nav.post-navigation.next {
+  margin-top: 0;
+}
+  #gallery_info {
+    border-bottom: 2px solid transparent;
+  }
+}
+
+.folio_img_wrap img {
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding: 1px;
+}
+
+@media screen and (min-width: 769px) {
+  .portfolio-description-text {
+    p {
+      padding: 0px 80px 10px;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  #vertical_left { 
+      section.portfolio-description-text {
+        padding-top: 45px;
+      }
+      .portfolio-description-text {
+        p {
+          padding: 0px;
+        }
+      }
+  }
+}
+@media screen and (min-width: 1200px) {
+   section#portfolio-description-img-information #social_media-share {
+    margin-left: 20px;
+  }
+  .post-navigation {
+    a {
+      margin: 10px;
+    }
+  }
+  .thumbnail_gallery {
+    padding-top: 60px;
+    margin-top: 60px;
+  }
+}
+
+#vertical_fullwidth {
+  div:first-of-type {
+    margin-top: 50px;
+  }
+}
+#gallery_left {
+  margin: 0;
+  img {
+    max-width: 100%;
+  }
+}

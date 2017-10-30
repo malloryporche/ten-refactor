@@ -1,0 +1,128 @@
+// MEMBER HEADER //
+#mmbr__profile {
+	padding-bottom: 120px;
+}
+row.member__header {
+	margin: 0;
+	padding: 0;
+}
+section.member__header {
+	text-align: center;
+	h1 {
+		padding: 100px 0 0;
+		font-weight: 800;
+		span:last-of-type {
+			text-transform: lowercase; 
+			font-weight: 400;
+		}
+	}
+	hr {
+		border: 5px solid $secondary_color;
+		max-width: 20%;
+		margin: 20px auto 60px;
+		padding: 0;
+	}
+	img {
+		max-width: 100%;
+		display: inline-block;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		border-bottom: 2px solid $primary_color;
+	}
+	.mmbr__info {
+		h5, h6 {
+			text-align: left;
+		}
+		h5 {
+			padding-top: 10px;
+			text-transform: uppercase;
+			&:first-of-type {
+				padding-top: 40px;
+			}
+		}
+		h6 {
+			&:last-of-type {
+				padding-bottom: 70px;
+				border-bottom: 2px solid $primary_color;
+			}
+		}
+	}
+}
+#mmbr__profile {
+	h4 {
+		padding: 30px 0 60px;
+		font-weight: 800;
+		color: lighten($secondary_color, 20%);
+		letter-spacing: 2px;
+		line-height: 150%;
+		border-bottom: 2px solid $primary_color;
+	}
+}
+
+#ftr_logo h1 {
+	padding-top: 50px;
+}
+#footer {
+	padding-bottom: 50px;
+}
+
+@media screen and (min-width: 847px) and (max-width: 991px) {
+	.mmbr__info {
+		h5, h6 {
+			text-align: center;
+			margin-left: 75px;
+			margin-right: 75px;
+		}
+	}
+	#mmbr__profile {
+		h4 {
+			margin-left: 75px;
+			margin-right: 75px;
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	div#member__img.col-sm-12.col-md-6.col-lg-6.col-lg-offset-1 {
+		border-right: 2px solid $primary_color;
+		img {
+			float: right;
+		}
+	}
+	section.member__header {	
+		margin-left: 10px;
+		.mmbr__info {	
+			h5:first-of-type {
+				padding-top: 0;
+			}
+			h6:last-of-type {
+				padding-bottom: 30px;
+			}
+		}
+	}
+	#mmbr__profile {
+		h4 {
+			padding: 0 0 25px;
+		}
+		div#social_media-share {
+			float: right;
+			margin-top: -70px;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	section.member__header {	
+		.mmbr__info {	
+			h5:first-of-type {
+				
+			}
+		}
+	}
+	#mmbr__profile {
+		div#social_media-share {
+			float: left;
+			margin-top: 0;
+		}
+	}
+}
